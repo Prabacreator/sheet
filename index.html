@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@media (min-width: 768px) {main {max-width: 420px;}}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif !important;
+	font-weight: 300 !important;
+}
+main {
+	width: 100%;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+section {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+section .container-fluid{
+	position: relative;
+	z-index: 1;
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+a {
+    text-decoration: none!important;
+}
+.text-dark {
+    color: #444444!important;
+}
+.text-danger{
+    color: #D73A37!important;
+}
+.btn-danger {
+    background-color: #D73A37!important;
+}
+.praba {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 1px #fff;
+}
+</style>
+<title>Form To Google Sheets </title>
+</head>
+<body class="bg-light">
+<main class="m-auto">
+<section class="container">
+<video autoplay muted loop>
+    <source src="v2.mp4" type="video/mp4">
+</video>
+<div class="container-fluid">
+<form class="container btn-group-vertical" name="sheet">
+    <div class="btn btn-secondary text-light">
+        <img src="praba.png" width="100"/>
+        <h2 class="praba"><b class="text-dark">Las</b> <b class="text-danger">Praba</b></h2>
+    </div>
+    <div class="btn btn-light p-2">
+<!---Home--->
+    <div id="home" class="container btn">
+        <input class="form-control mt-4 mb-4 py-4" type="button" value="Input Data Keuangan" onclick="document.getElementById('home').style.display=('none');document.getElementById('keuangan').style.display=('block');">
+        <input class="form-control py-4 mb-4" type="button" value=" Input Data Pembelian" onclick="document.getElementById('home').style.display=('none');document.getElementById('pembelian').style.display=('block');">
+    </div>
+<!---Keuangan--->
+    <div id="keuangan" style="display:none" class="text-start">
+        <h2 class="text-center"><b class="text-dark">Keuangan</b></h2>
+       <div class="row mb-2">
+           <div class="col-6">
+               <label for="">Uang Keluar</label>
+           </div>
+           <div class="col-6">
+               <input class="form-control" name="Uang-Keluar" type="number" required/>
+           </div>
+       </div>
+       <div class="row mb-2">
+           <div class="col-6">
+               <label for="">Uang Masuk</label>   
+           </div>
+           <div class="col-6">
+               <input class="form-control" type="number" name="Uang-Masuk" required/>
+           </div>
+       </div>
+       <label for="">Keterangan</label>
+       <input class="form-control" name="Keterangan" type="text" required/>
+       <input class="btn btn-danger mt-2" type="submit" value="Simpan"/>
+       <div class="back text-end">
+           <a href="" class="text-danger">Kembali</a>
+       </div>
+    </div>
+<!---Pembelian--->
+    <div id="pembelian" style="display:none" class="text-start">
+        <h2 class="text-center"><b class="text-dark">Pembelian</b></h2>
+       <label for="">Nama Barang</label>
+       <input class="form-control mb-2" name="Keterangan" type="text" required/>
+       <div class="row mb-2">
+           <div class="col-6">
+               <label for="">Banyaknya</label>
+           </div>
+           <div class="col-6">
+               <input class="form-control" name="Jml" type="number" required/>
+           </div>
+       </div>
+       <div class="row ">
+           <div class="col-6">
+               <label for="">Harga Total</label>   
+           </div>
+           <div class="col-6">
+               <input class="form-control" type="number" name="Uang-Keluar" required/>
+           </div>
+       </div>
+       <input class="btn btn-danger mt-2" type="submit" value="Simpan"/>
+       <div class="back text-end">
+           <a href="" class="text-danger">Kembali</a>
+       </div>
+    </div>
+    </div>
+</form>
+<div class="container">
+    <div class="btn btn-send d-none">
+        <span class="spinner-border text-danger px-5"></span>
+    </div>
+    <div class="btn-save d-none">
+        <a href="">
+            <div class="text-light">
+                <h2>Success !</h2>
+                <p>Data Anda berhasil disimpan</p>
+            </div>
+        </a>
+    </div>
+    <div class="btn-error d-none">
+        <a href="">
+            <div class="text-light">
+                <h2>Error !</h2>
+                <p>Data Anda gagal disimpan</p>
+            </div>
+        </a>
+    </div>
+</div>
+  <script>
+    const scriptURL = 'url'
+    const form = document.forms['sheet']
+    const btnSend = document.querySelector('.btn-send')
+    const btnSave = document.querySelector('.btn-save')
+    const btnError = document.querySelector('.btn-error')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      showLoadingIndicator()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => showSuccessMessage(response))
+        .catch(error => showErrorMessage(error))
+    })
+
+    function showLoadingIndicator () {
+      form.classList.add('d-none')
+      btnSend.classList.remove('d-none')
+    }
+
+    function showSuccessMessage (response) {
+      console.log('Success!', response)
+      setTimeout(() => {
+        btnSave.classList.remove('d-none')
+        btnSend.classList.add('d-none')
+      }, 10000)
+    }
+
+    function showErrorMessage (error) {
+      console.error('Error!', error.message)
+      setTimeout(() => {
+        btnError.classList.remove('d-none')
+        btnSend.classList.add('d-none')
+      }, 100)
+    }
+  </script>
+</section>
+</main>
+</body>
+</html>
