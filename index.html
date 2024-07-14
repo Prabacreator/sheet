@@ -28,9 +28,7 @@ section {
 	text-align: center;
 	justify-content: center;
 }
-h1 {
-    font-size: 2.5em!important;
-}
+
 a {
     text-decoration: none!important;
     color: #ffffff!important;
@@ -42,49 +40,92 @@ a {
 <main class="m-auto text-light">
 <section class="container-fluid">
     
-<!--- form --->
-<form class="container" name="sheet">
-    <h1>
-        <img src="praba.png" width="80"/>
-        <b>LasPraba</b>
-    </h1>
+    
+    
+    
+<form name="sheet">
 <div class="accordion mb-2" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <h2><b>Purchase</b></h2>
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+        <b>Pembelian</b>
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+    <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <textarea class="form-control" type="text" name="Description" placeholder="Description"rows=""></textarea>
-        <input class="form-control" type="number" name="Amount" placeholder="Amount">
-        <input class="form-control" type="number" name="UnitPrice" placeholder="UnitPrice">
-        <input class="form-control" type="number" name="Expenditure" placeholder="AllPrices">
-        <button class="btn btn-dark w-100 my-4" type="submit">Submit</button>
+        <textarea class="form-control" type="text" name="Description" placeholder="Nama Barang"rows=""></textarea>
+        <input class="form-control" type="number" name="Amount" placeholder="Banyaknya">
+        <input class="form-control" type="number" name="UnitPrice" placeholder="Harga Satuan">
+        <input class="form-control" type="number" name="Expenditure" placeholder="Total Harga">
+        <button class="btn btn-dark w-100 my-4" type="submit">Simpan</button>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <h2><b>Finance</b></h2>
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+        <b>Keuangan</b>
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <input class="form-control" type="number" name="Expenditure" placeholder="Expenditure">
-        <input class="form-control" type="number" name="income" placeholder="income">
-        <textarea class="form-control" type="text" name="Description" placeholder="Informations" rows="4"></textarea>
-        <button class="btn btn-dark w-100 my-4" type="submit">Submit</button>
+        <input class="form-control" type="number" name="Expenditure" placeholder="Uang Keluar">
+        <input class="form-control" type="number" name="income" placeholder="Uang Masuk">
+        <textarea class="form-control" type="text" name="Description" placeholder="Keterangan" rows="4"></textarea>
+        <button class="btn btn-dark w-100 my-4" type="submit">Simpan</button>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+        <b>Absensi Pekerja</b>
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Teknisi (Tukang)
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <input class="form-control" type="text" name="Teknisi-1" placeholder="1">
+                  <input class="form-control" type="text" name="Teknisi-2" placeholder="2">
+                  <input class="form-control" type="text" name="Teknisi-3" placeholder="3">
+                  <input class="form-control" type="text" name="Teknisi-4" placeholder="4">
+                  <input class="form-control" type="text" name="Teknisi-5" placeholder="5">
+                  <button class="btn btn-dark w-100 my-4" type="submit">Simpan</button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Helper (Kernet)
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <input class="form-control" type="text" name="Helper-1" placeholder="1">
+                  <input class="form-control" type="text" name="Helper-2" placeholder="2">
+                  <input class="form-control" type="text" name="Helper-3" placeholder="3">
+                  <input class="form-control" type="text" name="Helper-4" placeholder="4">
+                  <input class="form-control" type="text" name="Helper-5" placeholder="5">
+                  <button class="btn btn-dark w-100 my-4" type="submit">Simpan</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <a href="https://docs.google.com/spreadsheets/d/1ehPLR8VSdkMdaNEyTOn2A8nT-75FbpYiVoEKxjrK8Fs/edit?usp=drivesdk">View To Google Sheets</a>
-</form>   
-
-<!--- script form --->
+</form>
 <input class="send spinner-border d-none bg-dark text-light">
 <a href="" class="save d-none text-light"><h2>Success !</h2><p>Data Anda berhasil disimpan</p></a>
 <a href="" class="error d-none text-light"><h2>Error !</h2><p>Data Anda gagal disimpan</p></a>
