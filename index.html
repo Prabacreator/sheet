@@ -40,7 +40,7 @@ h2 {
         <textarea class="form-control my-2" type="text" name="Description" placeholder="Description / Product Name"rows="4"></textarea>
         <input class="form-control my-2" type="number" name="Amount" placeholder="Amount">
         <input class="form-control my-2" type="number" name="UnitPrice" placeholder="Unit Price">
-        <input class="form-control my-2" type="number" name="TotalPayment" placeholder="Total Payment"required>
+        <input class="form-control my-2" type="number" name="Payment" placeholder="Payment" required>
     
         <button class="save btn btn-dark w-100 my-4 py-2" type="submit">Save</button>
         
@@ -52,10 +52,10 @@ h2 {
             <span class="success btn btn-dark w-100 my-4 py-2 d-none">Data Saved Successfully</span>
             <span class="error btn btn-dark text-danger w-100 my-4 py-2 d-none">Data Failed To Save</span>
         </a>
-        <a href="https://docs.google.com/spreadsheets/d/132SNmSECiDSCTlrwNSgddL0YY80fNL1FdH-sRAmaH04/edit?usp=drivesdk">View The Google Sheet</a>
+        <a href="https://script.google.com/macros/s/AKfycbzDPjzRsA-0RmcR-obKQuipgIKsfO3qTFRR1vLPAWnSLyzz2h5gFs8Y3lkBNSaiUbm7HA/exec">Show Data</a>
     </form> 
     <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwHumF2LMVR_pu4xLZ2zeSW81zinadS_2xEExPJDvblY-kkl7E9_MRcBFdA-pBVahCv/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzmhnKBxtUljwAp9hFU-_O_r_zQwFIQXxyWEoqKGr8AM84HptuMNQjBqNRjIcXI3ePvyQ/exec'
     const form = document.forms['sheet']
     const save = document.querySelector('.save')
     const loading = document.querySelector('.loading')
@@ -101,10 +101,10 @@ h2 {
 <!---
 AppScript Sheet1 Url: 
 
-https://script.google.com/macros/s/AKfycbwHumF2LMVR_pu4xLZ2zeSW81zinadS_2xEExPJDvblY-kkl7E9_MRcBFdA-pBVahCv/exec
+https://script.google.com/macros/s/AKfycbzmhnKBxtUljwAp9hFU-_O_r_zQwFIQXxyWEoqKGr8AM84HptuMNQjBqNRjIcXI3ePvyQ/exec
 
-Google Sheet Url:
+Show Data Url:
 
-https://docs.google.com/spreadsheets/d/132SNmSECiDSCTlrwNSgddL0YY80fNL1FdH-sRAmaH04/edit?usp=drivesdk
+https://script.google.com/macros/s/AKfycbzDPjzRsA-0RmcR-obKQuipgIKsfO3qTFRR1vLPAWnSLyzz2h5gFs8Y3lkBNSaiUbm7HA/exec"
 
 --->
