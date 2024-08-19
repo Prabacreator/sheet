@@ -1,23 +1,115 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Pr@baInvoice</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>function printPage() { window.print();}</script>
+<title>INVOICE</title>
 <style>
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@media (min-width: 768px) {main {max-width: 420px;}}
+@import "forms";
 body {
-  matgin: 0;
-  padding: 0;
-  font-family: 'Ubuntu', sans-serif !important;
-  font-weight: 300 !important;
+    margin: 0;
+    padding: 0;
+	font-family: 'Ubuntu', sans-serif !important;
+	font-weight: 300 !important;
+}
+h1 { 
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
+}
+th { font-size: 18px;}
+input, textarea {
+    color: #2400FF;
 }
 </style>
 </head>
-<body class="d-flex text-center align-middle w-100 h-100">
-<iframe src="https://script.google.com/macros/s/AKfycbyaVYmU37nw8UFE27UsgNdYLHLe3libFRi0UgDf6Dul4kHFmcRCoBhIX6GqXDzT1WsB/exec"class="container-fluid w-100 h-100"></iframe>
+<body class="d-flex text-center align-middle">
+    <main class="d-flex text-center align-middle">
+        <table class="table table-borderless p-auto">
+            <tr>
+                <th class="text-start" colspan="3">
+                    <h1 class="fw-bold text-success">Invoice</h1>
+                    <p>Date <input type="date" class="border-0 font-monospace"></p>
+                </th>
+            </tr>
+            <tr>
+                <th class="text-start" colspan="3">To :</th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <textarea rows="3" class="border-0 w-100 fw-bold fs-6 font-monospace"></textarea>
+                    <hr>
+                </th>
+            </tr>
+            <tr>
+                <th class="text-start" colspan="3">
+                    Item Description
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <textarea rows="3" class="border-0 w-100 fw-bold fs-6 font-monospace"></textarea>
+                    <hr>
+                </th>
+            </tr>
+            <tr>
+                <th class="text-start">Price</th>
+                <th>:</th>
+                <th class="text-end">
+                     <input type="tel" class="border-0 w-100 text-end fs-6 fw-bold font-monospace"/>
+                </th>
+            </tr>
+            <tr>
+                <th class="text-start">Down Payment</th>
+                <th>:</th>
+                <th class="text-end">
+                     <input type="tel" class="border-0 w-100 text-end fs-6 fw-bold font-monospace"/>
+                </th>
+            </tr>
+            <tr>
+                <th class="text-start">Total Payment</th>
+                <th>:</th>
+                <th class="text-end">
+                     <input type="tel" class="border-0 w-100 text-end fs-6 fw-bold font-monospace"/>
+                     <hr>
+                </th>
+            </tr>
+            <tr>
+                <th class="text-start">Total cost</th>
+                <th>:</th>
+                <th class="text-end">
+                     <input type="tel" class="border-0 w-100 text-end text-danger fs-6 fw-bold font-monospace"/>
+                     
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <textarea rows="2" class="border-0 w-100 fw-bold fs-6 text-danger text-center font-monospace"></textarea>
+                     
+                </th>
+            </tr>
+            <tr>
+                <th class="text-center align-middle text-success font-monospace">
+                    Terimakasih atas kepercayaan dan kerjasamanya.
+                </th>
+                <th class="text-center align-middle" colspan="2">
+                    <p>From</p>
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M512 908 c-52 -14 -110 -81 -157 -182 -88 -185 -77 -316 26 -316 32 0 36 -3 32 -19 -8 -29 14 -61 42 -61 14 0 25 -1 25 -3 0 -2 -18 -45 -40 -97 -37 -86 -44 -118 -20 -94 11 11 119 273 144 351 16 48 19 52 44 47 38 -7 147 9 145 21 -1 10 -33 10 -104 -1 -31 -5 -37 -2 -42 16 -3 12 1 43 9 70 48 162 32 257 -46 273 -14 2 -40 1 -58 -5z m92 -40 c22 -31 20 -118 -3 -198 -11 -36 -20 -57 -20 -46 -1 27 -24 6 -46 -44 -10 -22 -20 -39 -22 -37 -7 8 39 123 54 134 21 16 8 31 -15 17 -18 -12 -81 -184 -85 -232 -2 -28 -4 -29 -59 -30 -77 -2 -93 19 -86 116 8 108 93 277 161 321 44 28 101 28 121 -1z m-68 -394 c-3 -9 -6 -20 -6 -25 0 -5 -9 -9 -20 -9 -23 0 -24 3 -8 30 15 24 43 27 34 4z m-26 -72 c0 -14 -40 -52 -55 -52 -16 0 -24 18 -17 43 3 12 14 17 38 17 19 0 34 -4 34 -8z"/></g></svg>
+                    <p class="fw-bold fs-6 font-monospace">Slamet Riadzy</p>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <button type="button" class="btn btn-sm btn-outline-dark d-print-none" onclick="printPage()">PrintPDF</button>
+                </th>
+            </tr>
+        </table>
+    </main>
 </body>
 </html>
+
